@@ -11,12 +11,11 @@ env:
 permissions:
   id-token: write   # This is required for requesting the JWT
   contents: read    # This is required for actions/checkout
+  security-events: write
 
 jobs:
   terraform-plan:
     runs-on: ubuntu-latest
-    permissions:
-      security-events: write
     steps:
     - uses: actions/checkout@v3
     - name: Configure AWS Credentials
