@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1-node16
+      uses: aws-actions/configure-aws-credentials@v2
       with:
         role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/read-access
         role-session-name: github-${{ github.sha }}
