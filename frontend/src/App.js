@@ -52,6 +52,8 @@ export default function App() {
   return (
     <div style={{width: "90%", paddingLeft: "25px"}}>
       <h1>Welcome to the Feedback Form, ALPFA NERTS 2023 Guests!</h1>
+      To see how the frontend and infastructure for this form was prepared, <a href="https://github.com/gcardonag/feedback-form-demo">click here!</a>
+      <br/><br/>
       <b>NOTE: All fields on this form are optional</b>
       <br/>
       <form onSubmit={handleSubmit(onSubmit)}>
