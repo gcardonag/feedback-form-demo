@@ -13,25 +13,8 @@ permissions:
   contents: read    # This is required for actions/checkout
 
 jobs:
-  oidc_debug_test:
-    runs-on: ubuntu-latest
-    name: A test of the oidc debugger
-    steps:
-      - name: Checkout actions-oidc-debugger
-        uses: actions/checkout@v3
-        with:
-          repository: github/actions-oidc-debugger
-          ref: main
-          # token: ${{ secrets.your-checkout-token }}
-          path: ./.github/actions/actions-oidc-debugger
-      - name: Debug OIDC Claims
-        uses: ./.github/actions/actions-oidc-debugger
-        with:
-          audience: 'https://github.com/github'
   terraform-plan:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
     steps:
     - uses: actions/checkout@v3
     - name: Configure AWS Credentials
