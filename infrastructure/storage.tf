@@ -1,5 +1,3 @@
-#TODO: Finish writing the rest of the TF
-#TODO: GitHub actions to build and deploy site
 resource "aws_s3_bucket" "frontend" {
   bucket = "feedback-form-demo-alpfa-nerts-2023"
 }
